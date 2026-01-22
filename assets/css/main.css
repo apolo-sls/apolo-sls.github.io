@@ -653,7 +653,7 @@ input, select, textarea {
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.5;
+			opacity: 0; /* era 0.5 */
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -1158,7 +1158,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/bg-apolo-bl.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1667,3 +1667,34 @@ input, select, textarea {
     display: block;
     margin: 0 auto 1rem auto;  /* Centrada y con espacio abajo */
 }
+
+/* Language switch (top-right) */
+#header {
+  position: relative;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.lang-switch .button {
+  height: 2.25rem;
+  line-height: 2.25rem;
+  padding: 0 0.9rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12rem;
+}
+
+/* Mobile tweak */
+@media screen and (max-width: 736px) {
+  .lang-switch {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
